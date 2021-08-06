@@ -17,12 +17,14 @@ const randomIntegerFromInterval = (min, max) => {
 
 function onStartBtnClick() {
   runColorSwich();
-  refs.startBtnRef.setAttribute("disabled", true);
+  // refs.startBtnRef.setAttribute("disabled", true);
+  refs.startBtnRef.disabled = true;
 }
 
 function onStopBtnClick() {
   stopColorSwich();
-  refs.startBtnRef.removeAttribute("disabled");
+  //   refs.startBtnRef.removeAttribute("disabled");
+  refs.startBtnRef.disabled = false;
 }
 
 function runColorSwich() {
@@ -34,5 +36,5 @@ function runColorSwich() {
 
 function stopColorSwich() {
   clearInterval(timerId);
-  refs.body.style.backgroundColor = null;
+  //   refs.body.style.backgroundColor = null;
 }
